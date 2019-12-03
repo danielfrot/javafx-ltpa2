@@ -13,9 +13,11 @@ public class Main extends Application {
     private static Scene login;
     private static Scene FormFuncionarios;
     private static Scene ListFuncionarios;
+    private static boolean maximized = true;
     @Override
     public void start(Stage window) throws Exception {
 
+        
         stage = window;
         window.setTitle("Controle de Funcionarios");
         Parent fxmlLogin = FXMLLoader.load(getClass().getResource("../views/Login.fxml"));
@@ -34,11 +36,11 @@ public class Main extends Application {
                 break;
             case "ListFuncionarios":
                 stage.setScene(ListFuncionarios);
-                stage.setMaximized(true);
+                stage.setMaximized(maximized);
                 break;
             case "FormFuncionarios":
                 stage.setScene(FormFuncionarios);
-                stage.setMaximized(true);
+                stage.setMaximized(maximized);
                 break;
         }
     }

@@ -130,7 +130,7 @@ public class CRUD {
                 stat.setString(13, funcionario.getCargo());
                 stat.setString(14, funcionario.getSetor());
 		
-                stat.execute();
+                stat.executeUpdate();
 		
 		stat.close();
         } catch (SQLException ex) {
@@ -191,9 +191,6 @@ public class CRUD {
         } catch (SQLException ex) {
             Logger.getLogger(CRUD.class.getName()).log(Level.SEVERE, null, ex);
         }
-		
-		
-    
     }
     
 }
